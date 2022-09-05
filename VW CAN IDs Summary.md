@@ -48,7 +48,8 @@
 + **0x380**
   * `b2` - acceleration pedal (excluding cruise control)
 + **0x38A**
-  * `b1` - ACC buttons (128 - off, `bit0` - on/off, `bit2` - spd down, `bit3` - spd up)
+  * `b1` - ACC buttons (128 - off, `bit0` - on/off, `bit1 - cancel, `bit2` - spd down, `bit3` - spd up)
+  * `b2` - ACC buttons (`bit0` - Set, `bit1` - Reset)
 + **0x390**
   * `b2` - driver door open (`bit0`)
   * `b3` - reverse gear light (`bit4`), rear left and right doors open (`bit2` and `bit3`)
@@ -57,12 +58,15 @@
   * `b6` - low/high beam light (`bit0`/`bit1`), hazard lights (`bit7`)
   * `b7` - windscreen wipers (`bit2`), brake signal (`bit3`)
 + **0x392**
+  * `b1` - Status Hazard Lights (`bit3`)
   * `b4` - headlights auto mode (`bit5`), rear fog light (`bit7`)
   * (?) `b3` - ambient light level (very low values)
 + **0x3A0**
   * (?) `b6` - some ticks, correlates speed
 + **0x3D0**
   * (?) `b0` - noisy when steering, wheel amplifier?
++ **0x440**
+  * `b1` - Gear Box Position
 + **0x480**
   * (?) `b3` - slowly grows up when engine on, grow correlates speed, fuel concumption?
   * `b5` - clutch fully disengaged (`bit7`)
